@@ -1,0 +1,68 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: ¦ÌVision V5.27.1.0
+Copyright (C) 2019 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: 1 11, 111, LIC=LSNGK-Z9PGY-FUV4P-MUU7S-0QQ6V-3B010
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Plus  Version: 5.27.1.0
+Toolchain Path:  D:\SoftWare\Keil MDK-ARM\ARM\ARMCLANG\Bin
+C Compiler:      ArmClang.exe V6.12
+Assembler:       Armasm.exe V6.12
+Linker/Locator:  ArmLink.exe V6.12
+Library Manager: ArmAr.exe V6.12
+Hex Converter:   FromElf.exe V6.12
+CPU DLL:         SARMCM3.DLL V5.27.1.0
+Dialog DLL:      DCM.DLL V1.17.2.0
+Target DLL:      Segger\JL2CM3.dll V2.99.35.0
+Dialog DLL:      TCM.DLL V1.36.1.0
+ 
+<h2>Project:</h2>
+G:\Desktop\Motor\MDK-ARM\Motor.uvprojx
+Project File Date:  08/09/2019
+
+<h2>Output:</h2>
+*** Using Compiler 'V6.12', folder: 'D:\SoftWare\Keil MDK-ARM\ARM\ARMCLANG\Bin'
+Build target 'Motor'
+compiling MricroStepDriver.c...
+../Src/main.c(121): warning: passing 'char [26]' to parameter of type 'uint8_t *' (aka 'unsigned char *') converts between pointers to integer types with different sign [-Wpointer-sign]
+        LCD_ShowString(30,70,200,16,16,"Welcome !!! Beef Cake !!!");
+                                       ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+../MyFile\ILI93xx.h(105): note: passing argument to parameter 'p' here
+void LCD_ShowString(u16 x,u16 y,u16 width,u16 height,u8 size,u8 *p);            //<CF><D4>Ê¾Ò»<B8><F6><D7>Ö·<FB><B4><AE>,12/16<D7><D6><CC><E5>
+                                                                 ^
+1 warning generated.
+compiling main.c...
+linking...
+Program Size: Code=23638 RO-data=6562 RW-data=16 ZI-data=1552  
+FromELF: creating hex file...
+"Motor\Motor.axf" - 0 Error(s), 1 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.5.1.pack
+                ARM.CMSIS.5.5.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.2.0
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.STM32F4xx_DFP.2.12.0.pack
+                Keil.STM32F4xx_DFP.2.12.0
+                STMicroelectronics STM32F4 Series Device Support, Drivers and Examples
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Motor
+  D:\SoftWare\Keil MDK-ARM\PACK\ARM\CMSIS\5.5.1\CMSIS\Core\Include
+  D:\SoftWare\Keil MDK-ARM\PACK\Keil\STM32F4xx_DFP\2.12.0\Drivers\CMSIS\Device\ST\STM32F4xx\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.2.0
+Build Time Elapsed:  00:00:02
+</pre>
+</body>
+</html>
