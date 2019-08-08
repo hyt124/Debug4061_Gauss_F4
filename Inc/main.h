@@ -77,6 +77,10 @@ void Error_Handler(void);
 #define KEYx2_GPIO_Port GPIOC
 #define KEYx3_Pin GPIO_PIN_7
 #define KEYx3_GPIO_Port GPIOC
+#define DIR__Pin GPIO_PIN_0
+#define DIR__GPIO_Port GPIOE
+#define EN__Pin GPIO_PIN_1
+#define EN__GPIO_Port GPIOE
 /* USER CODE BEGIN Private defines */
 
 /* USER CODE END Private defines */

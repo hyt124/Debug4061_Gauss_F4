@@ -58,9 +58,9 @@ void Locate_Run(DIR_Type dir,u32 frequency)
 {
 	mode=0;
 	if(dir == 1)//Ë³Ê±Õë
-	HAL_GPIO_WritePin(GPIOE,GPIO_PIN_0,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(DIR__GPIO_Port,DIR__Pin,GPIO_PIN_RESET);
 	else if(dir==0)//ÄæÊ±Õë
-	HAL_GPIO_WritePin(GPIOE,GPIO_PIN_0,GPIO_PIN_SET);
+		HAL_GPIO_WritePin(DIR__GPIO_Port,DIR__Pin,GPIO_PIN_SET);
 	TIM2_Startup(frequency);	
 }
 
@@ -72,9 +72,9 @@ void Locate_RunStep(DIR_Type dir,int times,u32 frequency)
 {
 	mode = 1;
 	if(dir == 1)//Ë³Ê±Õë
-		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_0,GPIO_PIN_RESET);
+		HAL_GPIO_WritePin(DIR__GPIO_Port,DIR__Pin,GPIO_PIN_RESET);
 	else if(dir==0)//ÄæÊ±Õë
-		HAL_GPIO_WritePin(GPIOE,GPIO_PIN_0,GPIO_PIN_SET);
+		HAL_GPIO_WritePin(DIR__GPIO_Port,DIR__Pin,GPIO_PIN_SET);
 	PWM_Count_Set = times;
 	if(flag == 0 && stop == 0)
 	{
