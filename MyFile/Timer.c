@@ -2,7 +2,13 @@
 
 int PWM_Count = 0;
 extern int PWM_Count_Set;
+extern float  _GetDistantResults;
 int stop = 0;
+//uint8_t a[] = {"distance"};
+//uint8_t x[] = {"x val"};
+//uint8_t y[] = {"y val"};
+//uint16_t xval;
+//uint16_t yval;
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
@@ -19,5 +25,13 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 			HAL_TIM_Base_Stop_IT(&htim2);
 		}
   }
+//	else if(htim == (&htim3))
+//	{
+//		LCD_Clear(WHITE);
+//		sprintf(a, "%.3f", _GetDistantResults);
+//		LCD_ShowString(90,270,200,16,16,a);
+//		LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
+//		LCD_ShowxNum(150,240,Get_CoordinateYResult(),3,16,0);	
+//	}
 }
 

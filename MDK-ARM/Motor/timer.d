@@ -36,4 +36,6 @@ motor/timer.o: ..\MyFile\Timer.c ..\MyFile\Timer.h ..\Inc\gpio.h \
   ..\MyFile\MricroStepDriver.h ..\MyFile\sys.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\Inc\tim.h
+  ..\Inc\tim.h ..\MyFile\ILI93xx.h ..\MyFile\User_Uart.h \
+  D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Inc\usart.h

@@ -1,4 +1,5 @@
-motor/main.o: ..\Src\main.c ..\Inc\main.h \
+motor/lcd_mode.o: ..\MyFile\lcd_mode.c ..\MyFile\lcd_mode.h \
+  ..\MyFile\ILI93xx.h ..\MyFile\sys.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal.h \
   ..\Inc\stm32f4xx_hal_conf.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_rcc.h \
@@ -32,13 +33,6 @@ motor/main.o: ..\Src\main.c ..\Inc\main.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h ..\Inc\tim.h \
-  ..\Inc\main.h ..\Inc\usart.h ..\Inc\gpio.h ..\Inc\fsmc.h \
-  ..\MyFile\UserMain.h ..\Drivers\MOTOR\h\motor.h ..\MyFile\UserMain.h \
-  ..\MyFile\ILI93xx.h ..\MyFile\sys.h \
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  ..\MyFile\KeyPad.h ..\MyFile\User_Uart.h \
-  D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
-  ..\MyFile\MricroStepDriver.h ..\MyFile\Timer.h ..\MyFile\GaussGun.h \
-  ..\MyFile\lcd_mode.h
+  ..\MyFile\KeyPad.h ..\MyFile\GaussGun.h ..\Inc\main.h

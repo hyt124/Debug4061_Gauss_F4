@@ -27,14 +27,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "motor.h"
 #include "UserMain.h"
-#include "ILI93xx.h"
-#include "keypad.h"
-#include "User_Uart.h"
-#include "MricroStepDriver.h"
-#include "GaussGun.h"
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -66,8 +59,6 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-uint16_t KEY=0;
-extern int stop;
 /* USER CODE END 0 */
 
 /**
@@ -106,19 +97,6 @@ int main(void)
   MX_USART3_UART_Init();
   MX_TIM5_Init();
   /* USER CODE BEGIN 2 */
-	User_GetErrorUart_Init();
-	User_DebugUart_Init();
-	User_DistantUart_Init();
-	TFTLCD_Init();
-	MotorPWM_Init();
-	SetMotorDutyRatio(0.5);
-	UpdateMotorState(MOTOR_FRONT);
-	LCD_Display_Dir(0);
-	POINT_COLOR=BLACK; 
-//	LCD_ShowString(30,50,200,16,16,"Fxxck");	
-//	LCD_ShowString(30,70,200,16,16,"U");	
-//	LCD_ShowString(30,90,200,16,16,"!!!");
-	LCD_ShowString(30,70,200,16,16,"Welcome !!! Beef Cake !!!");
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -128,11 +106,7 @@ int main(void)
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
-		KEY = Key_scan();
-    if(KEY == 16 ){
-		GaussGun_Fire(5000);
-		HAL_Delay(2000);
-		}					
+		User_Main();					
   }
   /* USER CODE END 3 */
 }

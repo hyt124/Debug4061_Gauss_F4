@@ -984,6 +984,7 @@ void LCD_ShowxNum(u16 x,u16 y,u32 num,u8 len,u8 size,u8 mode)
 	u8 t,temp;
 	u8 enshow=0;						   
 	for(t=0;t<len;t++)
+	
 	{
 		temp=(num/LCD_Pow(10,len-t-1))%10;
 		if(enshow==0&&t<(len-1))

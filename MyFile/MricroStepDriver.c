@@ -8,8 +8,9 @@ DIR_Type motor_dir=CW;//顺时针
 int PWM_Count_Set;
 int flag = 0;// 0 OR 1
 int mode = 0;// 0 OR 1
+volatile int stop_flag_FindCycleOnce = 0; //FindCycleOnce
 extern int stop;
-
+extern int16_t Coordinate1_One;
 /***************************************************
 Name: TIM2_Startup
 Tips:Double modes
@@ -82,7 +83,30 @@ void Locate_RunStep(DIR_Type dir,int times,u32 frequency)
 	}
 }
 
+void Locate_Stop(void){
+				stop = 0;
+				flag = 0;
+				HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
+			  HAL_TIM_Base_Stop_IT(&htim2);	
+}
 
+void Locate_FindCycleOnce(DIR_Type dir,int times,u32 frequency,uint16_t min_x_val,uint16_t max_x_val){
+			if(stop_flag_FindCycleOnce == 0)
+		{
+		Locate_RunStep(dir,times,frequency);
+		if(Coordinate1_One >=min_x_val && Coordinate1_One <= max_x_val)
+			{
+				stop_flag_FindCycleOnce = 1;
+				stop = 0;
+				flag = 0;
+				HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
+			  HAL_TIM_Base_Stop_IT(&htim2);	
+			}	
+		}
+		else
+		{
+		}
+}
 
 
 //void Locate_Rle(long num,u32 frequency,DIR_Type dir) //相对定位函数

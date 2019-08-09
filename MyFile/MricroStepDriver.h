@@ -33,6 +33,7 @@ void TIM2_OPM_RCR_Init(u16 arr,u16 psc);//TIM2_CH2 单脉冲输出+重复计数功能初始化
 void TIM2_Startup(u32 frequency);   //启动定时器8
 void Locate_Rle(long num,u32 frequency,DIR_Type dir); //相对定位函数
 void Locate_Abs(long num,u32 frequency);//绝对定位函数
-void Locate_run(DIR_Type dir,int times,u32 frequency);//Run_Step
+void Locate_RunStep(DIR_Type dir,int times,u32 frequency);//Run_Step
 void Locate_Run(DIR_Type dir,u32 frequency);//Run
+void Locate_FindCycleOnce(DIR_Type dir,int times,u32 frequency,uint16_t min_x_val,uint16_t max_x_val);
 #endif

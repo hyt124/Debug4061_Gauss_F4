@@ -37,4 +37,4 @@ motor/user_uart.o: ..\MyFile\User_Uart.c ..\MyFile\User_Uart.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   ..\Inc\usart.h ..\Inc\main.h ..\MyFile\User_PID.h ..\MyFile\User_PWM.h \
-  ..\Inc\tim.h
+  ..\Inc\tim.h ..\MyFile\ILI93xx.h ..\MyFile\sys.h

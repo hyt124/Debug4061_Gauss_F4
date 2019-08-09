@@ -36,4 +36,7 @@ motor/mricrostepdriver.o: ..\MyFile\MricroStepDriver.c \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdio.h \
-  ..\Inc\tim.h ..\Inc\main.h ..\MyFile\Timer.h ..\Inc\gpio.h
+  ..\Inc\tim.h ..\Inc\main.h ..\MyFile\Timer.h ..\Inc\gpio.h \
+  ..\MyFile\ILI93xx.h ..\MyFile\User_Uart.h \
+  D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
+  ..\Inc\usart.h

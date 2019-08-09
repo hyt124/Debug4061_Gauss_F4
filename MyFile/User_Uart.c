@@ -1,5 +1,6 @@
 #include "User_Uart.h"
 #include "User_PID.h"
+#include "ILI93xx.h"
 
 //公有变量
 
@@ -11,8 +12,11 @@ static uint8_t _GetDistantRxVal = 0;
 static uint8_t _GetDistantStatus = 0;
  float   _GetDistantResults = 0.0; 
 static uint8_t _GetDistantUpdateStatus = 0;
-static int16_t Coordinate1_One = 0 , Coordinate1_Two = 0;
+ int16_t Coordinate1_One = 0 , Coordinate1_Two = 0;
 static uint8_t CommandUpdateStatus = 0;
+
+uint8_t a[] = {"distance"};
+
 
 uint8_t _DebugCommand = 0;
 
@@ -108,6 +112,8 @@ void _GetErrorUartCallBack(void)
 		//转换字符串到整数
 		Coordinate1_One = atoi((const char*)Coordinate1);
 		Coordinate1_Two = atoi((const char*)Coordinate2);
+		
+		LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
 		//重新开启接收中断 等待下一次过程
 		HAL_UART_Receive_IT(&huart1,_GetErrorRXBuffer,7);
 		//指示收到新的指令
@@ -158,8 +164,22 @@ void _GetDistantUartCallBack(void)
 			//内存拷贝
 			memcpy(DecodeTable,&_GetDistantRxBuffer[2],5);
 			//字符串转浮点数
+			if((float)atof((const char*)DecodeTable) != 0 && (float)atof((const char*)DecodeTable) <= 4)
 			_GetDistantResults = (float)atof((const char*)DecodeTable);
 			//重置计数 重新开启中断
+			
+			if(_GetDistantResults >= 2 && _GetDistantResults <= 3.5)
+			{
+				_GetDistantResults = _GetDistantResults;
+			}
+			else
+			{
+				_GetDistantResults = 10;
+			}
+			sprintf(a, "%.3f", _GetDistantResults);
+			//LCD_Clear(WHITE);
+			LCD_ShowString(90,270,200,16,16,a);
+			
 			memset(_GetDistantRxBuffer,0x00,12);
 			RxCount = 0;
 			_GetDistantUpdateStatus = 1;
