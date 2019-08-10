@@ -13,6 +13,7 @@
 #include "gpio.h"
 #include "fsmc.h"
 #include "lcd_mode.h"
+#include "User_Check.h"
 
 void User_Main(void);
 

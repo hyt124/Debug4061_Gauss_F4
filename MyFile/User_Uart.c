@@ -15,7 +15,7 @@ static uint8_t _GetDistantUpdateStatus = 0;
  int16_t Coordinate1_One = 0 , Coordinate1_Two = 0;
 static uint8_t CommandUpdateStatus = 0;
 
-uint8_t a[] = {"distance"};
+
 
 
 uint8_t _DebugCommand = 0;
@@ -113,7 +113,7 @@ void _GetErrorUartCallBack(void)
 		Coordinate1_One = atoi((const char*)Coordinate1);
 		Coordinate1_Two = atoi((const char*)Coordinate2);
 		
-		LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
+		//LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
 		//重新开启接收中断 等待下一次过程
 		HAL_UART_Receive_IT(&huart1,_GetErrorRXBuffer,7);
 		//指示收到新的指令
@@ -176,9 +176,9 @@ void _GetDistantUartCallBack(void)
 			{
 				_GetDistantResults = 10;
 			}
-			sprintf(a, "%.3f", _GetDistantResults);
+		//	sprintf(a, "%.3f", _GetDistantResults);
 			//LCD_Clear(WHITE);
-			LCD_ShowString(90,270,200,16,16,a);
+			//LCD_ShowString(90,270,200,16,16,a);
 			
 			memset(_GetDistantRxBuffer,0x00,12);
 			RxCount = 0;
@@ -213,14 +213,14 @@ uint8_t Get_DebugCommand(void)
 int fputc(int ch,FILE *f)
 {
     uint8_t temp[1]={ch};
-    HAL_UART_Transmit(&huart3,temp,1,10);        //UartHandle是串口的句柄
+    HAL_UART_Transmit(&huart4,temp,1,10);        //UartHandle是串口的句柄
 		return ch;
 }
 
 
 PUTCHAR_PROTOTYPE
 {
-	HAL_UART_Transmit(&huart3,(uint8_t*)&ch,1,10);
+	HAL_UART_Transmit(&huart4,(uint8_t*)&ch,1,10);
 	return ch;
 }
 

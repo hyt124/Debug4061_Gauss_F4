@@ -120,6 +120,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGUARM</Key>
+          <Name>燩Mw爏?燩Mw爏?</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -162,22 +163,17 @@
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>stop_flag</ItemText>
+          <ItemText>Coordinate1_One</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Coordinate1_One</ItemText>
+          <ItemText>Coordinate1_Two</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>Coordinate1_Two</ItemText>
-        </Ww>
-        <Ww>
-          <count>3</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>fuck</ItemText>
+          <ItemText>dis</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>
@@ -911,6 +907,30 @@
       <bDave2>0</bDave2>
       <PathWithFileName>..\MyFile\lcd_mode.h</PathWithFileName>
       <FilenameWithoutPath>lcd_mode.h</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>54</FileNumber>
+      <FileType>1</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\MyFile\User_Check.c</PathWithFileName>
+      <FilenameWithoutPath>User_Check.c</FilenameWithoutPath>
+      <RteFlg>0</RteFlg>
+      <bShared>0</bShared>
+    </File>
+    <File>
+      <GroupNumber>6</GroupNumber>
+      <FileNumber>55</FileNumber>
+      <FileType>5</FileType>
+      <tvExp>0</tvExp>
+      <tvExpOptDlg>0</tvExpOptDlg>
+      <bDave2>0</bDave2>
+      <PathWithFileName>..\MyFile\User_Check.h</PathWithFileName>
+      <FilenameWithoutPath>User_Check.h</FilenameWithoutPath>
       <RteFlg>0</RteFlg>
       <bShared>0</bShared>
     </File>
