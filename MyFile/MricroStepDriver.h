@@ -6,7 +6,6 @@
 #include "tim.h"
 #include "Timer.h"
 #include "gpio.h"
-
 /********** 驱动器 端口定义 **************
 //DRIVER_DIR   PE0 
 //DRIVER_OE    PE1 
@@ -36,6 +35,5 @@ void Locate_Rle(long num,u32 frequency,DIR_Type dir); //相对定位函数
 void Locate_Abs(long num,u32 frequency);//绝对定位函数
 void Locate_RunStep(DIR_Type dir,int times,u32 frequency);//Run_Step
 void Locate_Run(DIR_Type dir,u32 frequency);//Run
-void Locate_RunAngle(DIR_Type dir,float Angle,u32 frequency);//Run by Angle
 void Locate_FindCycleOnce(DIR_Type dir,int times,u32 frequency,uint16_t min_x_val,uint16_t max_x_val);
 #endif

@@ -38,7 +38,6 @@
 "motor\timer.o"
 "motor\user_callback.o"
 "motor\lcd_mode.o"
-"motor\user_check.o"
 --library_type=microlib --strict --scatter "Motor\Motor.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

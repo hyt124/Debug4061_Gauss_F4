@@ -338,7 +338,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx,USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;                                              ../Drivers/STM32F4xx_HAL_Driver/Inc;                                              ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;                                              ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;                                              ../Drivers/CMSIS/Include;                                              ..\Drivers\MOTOR\h;                                              ..\MyFile;                                              ..\MyFile</IncludePath>
+              <IncludePath>../Inc;                                 ../Drivers/STM32F4xx_HAL_Driver/Inc;                                 ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;                                 ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;                                 ../Drivers/CMSIS/Include;                                 ..\Drivers\MOTOR\h;                                 ..\MyFile;                                 ..\MyFile</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -671,16 +671,6 @@
               <FileName>lcd_mode.h</FileName>
               <FileType>5</FileType>
               <FilePath>..\MyFile\lcd_mode.h</FilePath>
-            </File>
-            <File>
-              <FileName>User_Check.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\MyFile\User_Check.c</FilePath>
-            </File>
-            <File>
-              <FileName>User_Check.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>..\MyFile\User_Check.h</FilePath>
             </File>
           </Files>
         </Group>

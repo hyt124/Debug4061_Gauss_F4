@@ -2,6 +2,7 @@
 
 int PWM_Count = 0;
 extern int PWM_Count_Set;
+extern float  _GetDistantResults;
 int stop = 0;
 //uint8_t a[] = {"distance"};
 //uint8_t x[] = {"x val"};

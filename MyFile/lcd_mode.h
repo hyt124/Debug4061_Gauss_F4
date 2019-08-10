@@ -8,7 +8,6 @@ extern uint16_t dis_flag;
 extern uint16_t ang_flag;
 extern uint16_t DoA;
 extern uint16_t cnt;
-extern uint16_t fire_flag;
 extern uint8_t distance[];
 extern uint32_t aim;
 extern uint8_t angle[];

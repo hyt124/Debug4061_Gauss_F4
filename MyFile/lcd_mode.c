@@ -10,7 +10,6 @@ uint16_t lcd_flag = 0;
 uint16_t dis_flag = 0;
 uint16_t ang_flag = 0;
 uint16_t cnt = 0; 
-uint16_t fire_flag = 0;
 
 void mode_init(void)
 {
@@ -36,20 +35,10 @@ void mode_display(void)
 
 void mode1(void)
 {
-	fire_flag = 0;
 	LCD_ShowString(15,270,200,16,16,"Cur_dis:");
-	LCD_ShowString(15, 100, 200, 16, 16, "fire  ");
-	
-	if(Key_scan() == 15)
-	{
-		LCD_Clear(WHITE);
-		LCD_ShowString(15, 100, 200, 16, 16, "fired");
-		
-		GaussGun_Fire(5000);
-		HAL_Delay(2000);
-		fire_flag = 1;
-	}
-	
+	LCD_ShowString(15, 100, 200, 16, 16, "fire");
+	GaussGun_Fire(5000);
+	HAL_Delay(2000);
 	lcd_flag = 1;
 }
 
@@ -88,14 +77,6 @@ void mode2(void)
 				lcd_flag = 0;
 			}
 		}
-		else if(Key_scan() == 11 && dis_flag != 0)
-		{
-			LCD_Clear(WHITE);
-			aim = 0;
-			dis_flag = 0;
-			lcd_flag = 0;
-		}
-		
 	}
 	
 	if(dis_flag == 3 && Key_scan() == 15)
@@ -154,15 +135,6 @@ void mode3(void)
 				ang_flag = 2;
 				lcd_flag = 0;
 			}			
-		}
-		else if(Key_scan() == 12 && dis_flag != 0)
-		{
-			LCD_Clear(WHITE);
-			aim = 0;
-			aim_ang = 0;
-			ang_flag = 0;
-			dis_flag = 0;
-			lcd_flag = 0;
 		}
 	}
 	

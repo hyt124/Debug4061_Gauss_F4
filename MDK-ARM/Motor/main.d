@@ -41,4 +41,4 @@ motor/main.o: ..\Src\main.c ..\Inc\main.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdio.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\MyFile\MricroStepDriver.h ..\MyFile\Timer.h ..\MyFile\GaussGun.h \
-  ..\MyFile\lcd_mode.h ..\MyFile\User_Check.h
+  ..\MyFile\lcd_mode.h

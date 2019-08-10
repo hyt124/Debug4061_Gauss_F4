@@ -11,8 +11,6 @@
 #include "usart.h"
 
 
-extern float _GetDistantResults;
-
 //公有函数
 
 /* 误差获取串口 串口1 HC12串口 初始化 */
