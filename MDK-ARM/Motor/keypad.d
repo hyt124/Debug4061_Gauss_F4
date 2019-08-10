@@ -32,6 +32,4 @@ motor/keypad.o: ..\MyFile\KeyPad.c ..\MyFile\keypad.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_pwr_ex.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim.h \
   ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_tim_ex.h \
-  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h \
-  ..\MyFile\ILI93xx.h ..\MyFile\sys.h \
-  D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\stdlib.h
+  ..\Drivers\STM32F4xx_HAL_Driver\Inc\stm32f4xx_hal_uart.h

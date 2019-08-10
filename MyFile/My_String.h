@@ -1,0 +1,19 @@
+#ifndef STRING_H
+#define STRING_H
+#include "spi.h"
+#include "font.h"
+#include "gui.h"
+#include "My_Uart.h"
+#include "KeyPad.h"
+#include "GaussGun.h"
+void ShowError();
+void ShowDistant();
+void OpenFire();
+void LCDShowRefresh();
+void LCDType();
+void Q1();
+void Q2();
+void Q3();
+void Q4();
+void Q5();
+#endif

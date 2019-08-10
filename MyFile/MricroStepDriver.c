@@ -1,4 +1,9 @@
 #include "MricroStepDriver.h"
+#include "User_Uart.h"
+#include "ILI93xx.h"
+
+uint8_t a[] = {"distance"};
+
 u8 rcr_remainder;   //重复计数余数部分
 u8 is_rcr_finish=1; //重复计数器是否设置完成
 long rcr_integer;	//重复计数整数部分
@@ -8,7 +13,7 @@ DIR_Type motor_dir=CW;//顺时针
 int PWM_Count_Set;
 int flag = 0;// 0 OR 1
 int mode = 0;// 0 OR 1
-volatile int stop_flag_FindCycleOnce = 0; //FindCycleOnce
+int stop_flag_FindCycleOnce = 0; //FindCycleOnce
 extern int stop;
 extern int16_t Coordinate1_One;
 /***************************************************
@@ -101,11 +106,22 @@ void Locate_FindCycleOnce(DIR_Type dir,int times,u32 frequency,uint16_t min_x_va
 				flag = 0;
 				HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
 			  HAL_TIM_Base_Stop_IT(&htim2);	
+				LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
+				sprintf(a, "%.3f", _GetDistantResults);
+				LCD_ShowString(90,270,200,16,16,a);
 			}	
 		}
 		else
 		{
 		}
+}
+
+#define Every_steps_for_a_time 7.158157977// One Angle Step [Fre:500HZ Step:940 Angle:134]
+
+void Locate_RunAngle(DIR_Type dir,float Angle,u32 frequency)
+{
+	Locate_RunStep(dir,(int)(Angle*Every_steps_for_a_time)+(int)(Angle/5),frequency);
+	
 }
 
 

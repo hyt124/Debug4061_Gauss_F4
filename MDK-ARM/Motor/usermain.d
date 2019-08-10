@@ -41,4 +41,4 @@ motor/usermain.o: ..\MyFile\UserMain.c ..\MyFile\UserMain.h \
   D:\SoftWare\Keil\ MDK-ARM\ARM\ARMCLANG\Bin\..\include\string.h \
   ..\Inc\usart.h ..\Inc\main.h ..\MyFile\MricroStepDriver.h ..\Inc\tim.h \
   ..\MyFile\Timer.h ..\Inc\gpio.h ..\MyFile\GaussGun.h ..\Inc\main.h \
-  ..\Inc\fsmc.h ..\MyFile\lcd_mode.h
+  ..\Inc\fsmc.h ..\MyFile\lcd_mode.h ..\MyFile\User_Check.h
