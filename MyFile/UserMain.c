@@ -38,7 +38,6 @@ void User_Main(void)
 //	sprintf(data, "%.3f", _GetDistantResults);
 //  LCD_Clear(WHITE);
 //	LCD_ShowString(90,270,200,16,16,data);
-//  Locate_FindCycleOnce(1,800,100,340,350);	
 		Check();
 	}
 		

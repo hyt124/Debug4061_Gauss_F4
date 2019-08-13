@@ -106,9 +106,9 @@ void Locate_FindCycleOnce(DIR_Type dir,int times,u32 frequency,uint16_t min_x_va
 				flag = 0;
 				HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
 			  HAL_TIM_Base_Stop_IT(&htim2);	
-				LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
-				sprintf(a, "%.3f", _GetDistantResults);
-				LCD_ShowString(90,270,200,16,16,a);
+//				LCD_ShowxNum(90,240,Get_CoordinateXResult(),3,16,0);
+//				sprintf(a, "%.3f", _GetDistantResults);
+//				LCD_ShowString(90,270,200,16,16,a);
 			}	
 		}
 		else

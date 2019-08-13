@@ -4,6 +4,7 @@
 #include "GaussGun.h"
 #include "MricroStepDriver.h"
 #include "usart.h"
+#include "Timer.h"
 
 #include "tim.h"
 
@@ -22,6 +23,8 @@ uint8_t dis[] = {""};
 uint8_t ang[] = {""};
 uint8_t rec_flag = 0;
 uint8_t Distance = 0;
+int flag_fire = 0;
+extern int flag_dir;
 void DistantFire(uint16_t distant_cm);
 void AutoDisFire(float dist);
 
@@ -181,6 +184,32 @@ void DealAdvance1(void)
 
 void DealAdvance2(void)
 {
+	LCD_Clear(WHITE);
+	while(Key_scan() != 0);	
+	while(Key_scan() == 0);
+	uint16_t Set_Angle = 0;
+	Set_Angle = (uint16_t)(0.6644*280 - 68.487);
+	HAL_UART_Transmit(&huart4,&Set_Angle,1,10);	
+	printf("\n");
+	HAL_Delay(1000);
+	while(1)
+	{
+		if(flag == 0)
+		{
+			HAL_Delay(3000);
+			stop = 0;
+		}
+		Locate_RunAngle(flag_dir,60,100);
+		if(flag_fire == 0)
+		{
+			if(Get_CoordinateXResult()>= 300 && Get_CoordinateXResult()<= 310)
+			{
+				flag_fire = 1;
+				GaussGun_Fire(4900);
+			}	
+		}
+	}
+	
 	
 }
 
@@ -291,4 +320,28 @@ void AutoDisFire(float dist)
 	GaussGun_Fire(4900);
 	
 }
-
+/*
+	LCD_Clear(WHITE);
+	while(Key_scan() != 0);	
+	while(Key_scan() == 0);
+	
+	while(stop_flag_FindCycleOnce == 0)
+	{
+		Locate_RunAngle(flag_dir,60,100);
+		if(flag == 0)//顺时针
+		{
+			HAL_Delay(3000);
+			stop = 0;
+		}
+		if(Get_CoordinateXResult()>= 300 && Get_CoordinateXResult()<= 310)
+	  {
+		stop_flag_FindCycleOnce = 1;
+		stop = 0;
+		flag = 0;
+		HAL_TIM_PWM_Stop(&htim2,TIM_CHANNEL_1);
+		HAL_TIM_Base_Stop_IT(&htim2);	
+	  }
+	}
+	HAL_Delay(2000);
+	Distance = _GetDistantResults * 100;
+*/
