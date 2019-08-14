@@ -3,11 +3,11 @@
 <title>Static Call Graph - [Motor\Motor.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image Motor\Motor.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Tue Aug 13 22:40:50 2019
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6120001: Last Updated: Wed Aug 14 20:30:31 2019
 <BR><P>
-<H3>Maximum Stack Usage =        376 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
+<H3>Maximum Stack Usage =        388 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
-USART1_IRQHandler &rArr; HAL_UART_IRQHandler &rArr; UART_Receive_IT &rArr; HAL_UART_RxCpltCallback &rArr; _GetDistantUartCallBack &rArr; __hardfp_atof &rArr; __strtod_int &rArr; _local_sscanf &rArr; _scanf_real
+main &rArr; User_Main &rArr; Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 <P>
 <H3>
 Mutually Recursive functions
@@ -456,7 +456,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[71]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_double_epilogue
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
 <LI><a href="#[82]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_value
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fp_digits
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DistantFire
@@ -482,13 +482,13 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[67]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_llsr
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
 <LI><a href="#[9b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DistantFire
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AutoDisFire
 </UL>
 
 <P><STRONG><a name="[88]"></a>__aeabi_f2d</STRONG> (Thumb, 38 bytes, Stack size 0 bytes, f2d.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<BR><BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
 <LI><a href="#[e3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_GetDistantUartCallBack
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;AutoDisFire
 </UL>
@@ -673,7 +673,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f407xx.o(RESET)
 </UL>
 <P><STRONG><a name="[8d]"></a>Check</STRONG> (Thumb, 140 bytes, Stack size 16 bytes, user_check.o(.text.Check))
-<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
+<BR><BR>[Stack]<UL><LI>Max Depth = 332<LI>Call Chain = Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_scan
 <LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_Delay
@@ -686,10 +686,11 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Main
 </UL>
 
-<P><STRONG><a name="[92]"></a>DealAdvance1</STRONG> (Thumb, 228 bytes, Stack size 24 bytes, user_check.o(.text.DealAdvance1))
+<P><STRONG><a name="[92]"></a>DealAdvance1</STRONG> (Thumb, 268 bytes, Stack size 24 bytes, user_check.o(.text.DealAdvance1))
 <BR><BR>[Stack]<UL><LI>Max Depth = 268<LI>Call Chain = DealAdvance1 &rArr; AutoDisFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_scan
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowString
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
@@ -704,7 +705,7 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit
 <LI><a href="#[8c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;GaussGun_Fire
-<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
 <LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Get_CoordinateXResult
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_scan
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
@@ -739,10 +740,10 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Check
 </UL>
 
-<P><STRONG><a name="[91]"></a>DealBasic3</STRONG> (Thumb, 446 bytes, Stack size 64 bytes, user_check.o(.text.DealBasic3))
-<BR><BR>[Stack]<UL><LI>Max Depth = 300<LI>Call Chain = DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
+<P><STRONG><a name="[91]"></a>DealBasic3</STRONG> (Thumb, 484 bytes, Stack size 80 bytes, user_check.o(.text.DealBasic3))
+<BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
-<BR>[Calls]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<BR>[Calls]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
 <LI><a href="#[8e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Key_scan
 <LI><a href="#[95]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_ShowString
 <LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Clear
@@ -1086,7 +1087,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = HAL_TIM_Base_Stop_IT
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
 </UL>
 
 <P><STRONG><a name="[bd]"></a>HAL_TIM_ConfigClockSource</STRONG> (Thumb, 414 bytes, Stack size 56 bytes, stm32f4xx_hal_tim.o(.text.HAL_TIM_ConfigClockSource))
@@ -1187,7 +1188,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[c6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PeriodElapsedCallback
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_Startup
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
 </UL>
 
 <P><STRONG><a name="[c6]"></a>HAL_TIM_PeriodElapsedCallback</STRONG> (Thumb, 214 bytes, Stack size 32 bytes, timer.o(.text.HAL_TIM_PeriodElapsedCallback))
@@ -1447,7 +1448,7 @@ Global Symbols
 <LI><a href="#[eb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;LCD_Fast_DrawPoint
 </UL>
 
-<P><STRONG><a name="[96]"></a>Locate_FindCycleOnce</STRONG> (Thumb, 184 bytes, Stack size 64 bytes, mricrostepdriver.o(.text.Locate_FindCycleOnce))
+<P><STRONG><a name="[97]"></a>Locate_FindCycleOnce</STRONG> (Thumb, 184 bytes, Stack size 64 bytes, mricrostepdriver.o(.text.Locate_FindCycleOnce))
 <BR><BR>[Stack]<UL><LI>Max Depth = 228<LI>Call Chain = Locate_FindCycleOnce &rArr; Locate_RunStep &rArr; TIM2_Startup &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Stop
@@ -1457,7 +1458,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DealAdvance1
 </UL>
 
-<P><STRONG><a name="[97]"></a>Locate_RunAngle</STRONG> (Thumb, 128 bytes, Stack size 40 bytes, mricrostepdriver.o(.text.Locate_RunAngle))
+<P><STRONG><a name="[96]"></a>Locate_RunAngle</STRONG> (Thumb, 128 bytes, Stack size 40 bytes, mricrostepdriver.o(.text.Locate_RunAngle))
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = Locate_RunAngle &rArr; Locate_RunStep &rArr; TIM2_Startup &rArr; HAL_TIM_PWM_Start &rArr; TIM_CCxChannelCmd
 </UL>
 <BR>[Calls]<UL><LI><a href="#[f2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunStep
@@ -1467,6 +1468,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DealBasic3
 <LI><a href="#[93]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DealAdvance2
+<LI><a href="#[92]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;DealAdvance1
 </UL>
 
 <P><STRONG><a name="[f2]"></a>Locate_RunStep</STRONG> (Thumb, 156 bytes, Stack size 40 bytes, mricrostepdriver.o(.text.Locate_RunStep))
@@ -1475,8 +1477,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[9f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GPIO_WritePin
 <LI><a href="#[f3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;TIM2_Startup
 </UL>
-<BR>[Called By]<UL><LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
-<LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
+<BR>[Called By]<UL><LI><a href="#[96]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_RunAngle
+<LI><a href="#[97]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Locate_FindCycleOnce
 </UL>
 
 <P><STRONG><a name="[f4]"></a>MX_FSMC_Init</STRONG> (Thumb, 178 bytes, Stack size 72 bytes, fsmc.o(.text.MX_FSMC_Init))
@@ -1715,7 +1717,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[10a]"></a>User_Main</STRONG> (Thumb, 158 bytes, Stack size 40 bytes, usermain.o(.text.User_Main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 356<LI>Call Chain = User_Main &rArr; Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
+<BR><BR>[Stack]<UL><LI>Max Depth = 372<LI>Call Chain = User_Main &rArr; Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[d2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_TIM_PWM_Start
 <LI><a href="#[109]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_GetErrorUart_Init
@@ -1769,7 +1771,7 @@ Global Symbols
 <BR>[Address Reference Count : 1]<UL><LI> printfa.o(i.__0printf)
 </UL>
 <P><STRONG><a name="[5b]"></a>main</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, main.o(.text.main))
-<BR><BR>[Stack]<UL><LI>Max Depth = 372<LI>Call Chain = main &rArr; User_Main &rArr; Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
+<BR><BR>[Stack]<UL><LI>Max Depth = 388<LI>Call Chain = main &rArr; User_Main &rArr; Check &rArr; DealBasic3 &rArr; DistantFire &rArr; GaussGun_Fire &rArr; HAL_TIM_Base_Init &rArr; HAL_TIM_Base_MspInit &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[10a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;User_Main
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config

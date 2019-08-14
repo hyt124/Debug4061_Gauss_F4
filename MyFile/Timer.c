@@ -3,7 +3,7 @@
 int PWM_Count = 0;
 extern int PWM_Count_Set;
 int stop = 0;
-int flag_dir = 1;
+int flag_dir = 0;
 //uint8_t a[] = {"distance"};
 //uint8_t x[] = {"x val"};
 //uint8_t y[] = {"y val"};

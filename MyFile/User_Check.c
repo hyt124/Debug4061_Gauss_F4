@@ -154,6 +154,10 @@ void DealBasic3(void)
 	LCD_ShowString(15, 50, 200, 16, 16, "Aim_dis: ");
 	LCD_ShowString(90, 50, 200, 16, 16, dis);
 	stop =0;
+	Locate_RunAngle(0,66,500);     //new
+	HAL_Delay(5000);               //new
+	stop = 0;											//new
+	
 	Locate_RunAngle(1,Angle,500);
 	HAL_Delay(1000);
 	DistantFire(Distant);
@@ -167,6 +171,11 @@ void DealAdvance1(void)
 	while(Key_scan() == 0);
 	
 	LCD_ShowString(15, 50, 200, 16, 16, "Auto Shoot Once");
+	
+	Locate_RunAngle(0,66,500);    //new
+	HAL_Delay(5000);							//new
+	stop = 0;                     //new
+	
 	while(stop_flag_FindCycleOnce == 0)
 	{
 		Locate_FindCycleOnce(1,800,100,330,340);
@@ -196,7 +205,7 @@ void DealAdvance2(void)
 	{
 		if(flag == 0)
 		{
-			HAL_Delay(3000);
+			HAL_Delay(500);
 			stop = 0;
 		}
 		Locate_RunAngle(flag_dir,60,100);
