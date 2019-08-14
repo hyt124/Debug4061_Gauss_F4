@@ -76,6 +76,9 @@ Tips:Before using again you have to set stop to 0
 ***************************************************/
 void Locate_RunStep(DIR_Type dir,int times,u32 frequency)
 {
+	if(times == 0) //new
+		times = 1;   //new
+	
 	mode = 1;
 	if(dir == 1)//À≥ ±’Î
 		HAL_GPIO_WritePin(DIR__GPIO_Port,DIR__Pin,GPIO_PIN_RESET);
